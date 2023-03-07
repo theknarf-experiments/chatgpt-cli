@@ -1,0 +1,15 @@
+{
+  "name": "chatgpt-cli",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Frank Lyder Bredland <fl@nyggen.com>",
+  "license": "MIT",
+  "packageManager": "yarn@3.4.1",
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "openai": "^3.2.1"
+  },
+	"bin": {
+		"chatgpt": "./src/index.js"
+	}
+}
