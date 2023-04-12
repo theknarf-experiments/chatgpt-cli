@@ -1,4 +1,4 @@
-#!/usr/bin/env node
+#!/usr/bin/env -S yarn ts-node
 const { Configuration, OpenAIApi } = require("openai");
 const readline = require('node:readline');
 const { stdin: input, stdout: output } = require('node:process');
@@ -6,13 +6,14 @@ require('dotenv').config();
 
 const configuration = new Configuration({
   apiKey: process.env.OPENAI_API_KEY
-});
+}) as any;
 
-const openai = new OpenAIApi(configuration);
+const openai = new OpenAIApi(configuration) as any;
 const rl = readline.createInterface({ input, output });
 
 // REPL
-let messages = [];
+type Messages = any[];
+let messages : Messages = [];
 
 const question = () =>
 	new Promise(resolve => {
