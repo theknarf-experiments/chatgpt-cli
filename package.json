@@ -1,7 +1,5 @@
 {
   "name": "chatgpt-cli",
-  "version": "1.0.0",
-  "main": "index.js",
   "author": "Frank Lyder Bredland <fl@nyggen.com>",
   "license": "MIT",
   "packageManager": "yarn@3.4.1",
@@ -9,13 +7,20 @@
     "check:types": "tsc --noEmit --watch"
   },
   "dependencies": {
+    "@types/marked": "^4.0.8",
     "@types/node": "^18.15.11",
     "dotenv": "^16.0.3",
+    "ink": "^4.1.0",
+    "ink-text-input": "^5.0.1",
+    "marked": "^4.3.0",
+    "marked-terminal": "^5.1.1",
     "openai": "^3.2.1",
+    "react": "^18.2.0",
     "ts-node": "^10.9.1",
     "typescript": "^5.0.4"
   },
   "bin": {
-    "chatgpt": "./src/index.ts"
-  }
+    "chatgpt": "./src/index.tsx"
+  },
+  "type": "module"
 }
