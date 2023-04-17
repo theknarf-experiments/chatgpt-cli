@@ -4,17 +4,7 @@ import React, {useState, useEffect} from 'react';
 import dotenv from 'dotenv';
 import { render, Box, Text, Newline } from 'ink';
 import TextInput from 'ink-text-input';
-import { marked } from 'marked';
-import TerminalRenderer, { TerminalRendererOptions } from 'marked-terminal';
-
-type Props = TerminalRendererOptions & {
-	  children: string;
-};
-
-const Markdown = ({ children, ...options }: Props) => {
-	marked.setOptions({ renderer: new TerminalRenderer(options) });
-	return <Text>{marked(children).trim()}</Text>;
-}
+import Markdown from './Markdown.tsx';
 
 dotenv.config();
 
@@ -74,7 +64,7 @@ const App = () => {
 				</Text>
 			</Box>
 			<Box>
-				<Text>{">"}</Text>
+				<Text>{"> "}</Text>
 				<TextInput
 					value={value}
 					onChange={setValue}
