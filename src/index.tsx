@@ -3,8 +3,8 @@ import { Configuration, OpenAIApi } from "openai";
 import React, {useState, useEffect} from 'react';
 import dotenv from 'dotenv';
 import { render, Box, Text, Newline } from 'ink';
-import TextInput from 'ink-text-input';
 import Markdown from './Markdown.tsx';
+import { CompletionInput } from './CompletionInput.tsx';
 
 dotenv.config();
 
@@ -22,7 +22,6 @@ type Messages = Message[];
 
 const App = () => {
 	const [messages, setMessages] = useState<Messages>([]);
-	const [value, setValue] = useState('');
 
 	const chat = async (messages : Messages) => {
 		const completion = await openai.createChatCompletion({
@@ -45,8 +44,14 @@ const App = () => {
 			chat(newMessages);
 			return newMessages;
 		});
-		setValue('');
 	};
+
+	const slashCommands = [
+		/*{value: 'refFile', label: 'refFile'},
+		{value: 'spawnAGI', label: 'spawnAGI'},
+		{value: 'setupChain', label: 'setupChain'},*/
+		{value: 'Hi there! How are you doing?', label: 'example'},
+	];
 
 	return (
 		<Box flexDirection="column">
@@ -64,12 +69,7 @@ const App = () => {
 				</Text>
 			</Box>
 			<Box>
-				<Text>{"> "}</Text>
-				<TextInput
-					value={value}
-					onChange={setValue}
-					onSubmit={submit}
-				/>
+				<CompletionInput slashCommands={slashCommands} onSubmit={submit} />
 			</Box>
 		</Box>
 	);

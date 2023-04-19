@@ -73,6 +73,29 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/has-ansi@npm:^3.0.0":
+  version: 3.0.0
+  resolution: "@types/has-ansi@npm:3.0.0"
+  checksum: 0010f490d4a1532d5e1ffa5dbb753d3981b028fd10476cf7c3645d56ae94764e2f552337da0c81500801b6ef93a9f3ce08d968901345d4f73d0f63dc884b6291
+  languageName: node
+  linkType: hard
+
+"@types/lodash.isequal@npm:^4.5.5":
+  version: 4.5.6
+  resolution: "@types/lodash.isequal@npm:4.5.6"
+  dependencies:
+    "@types/lodash": "*"
+  checksum: 0f065989408a9e0584e6c27495be2cd4602e62650f55266aa195812582444463c0c8570c674ae84f947c11748f49ab43fd5b482fa120e08eeee4c23b162edc38
+  languageName: node
+  linkType: hard
+
+"@types/lodash@npm:*":
+  version: 4.14.194
+  resolution: "@types/lodash@npm:4.14.194"
+  checksum: 113f34831c461469d91feca2dde737f88487732898b4d25e9eb23b087bb193985f864d1e1e0f3b777edc5022e460443588b6000a3b2348c966f72d17eedc35ea
+  languageName: node
+  linkType: hard
+
 "@types/marked@npm:^4.0.8":
   version: 4.0.8
   resolution: "@types/marked@npm:4.0.8"
@@ -84,6 +107,31 @@ __metadata:
   version: 18.15.11
   resolution: "@types/node@npm:18.15.11"
   checksum: 977b4ad04708897ff0eb049ecf82246d210939c82461922d20f7d2dcfd81bbc661582ba3af28869210f7e8b1934529dcd46bff7d448551400f9d48b9d3bddec3
+  languageName: node
+  linkType: hard
+
+"@types/prop-types@npm:*":
+  version: 15.7.5
+  resolution: "@types/prop-types@npm:15.7.5"
+  checksum: 5b43b8b15415e1f298243165f1d44390403bb2bd42e662bca3b5b5633fdd39c938e91b7fce3a9483699db0f7a715d08cef220c121f723a634972fdf596aec980
+  languageName: node
+  linkType: hard
+
+"@types/react@npm:^18.0.37":
+  version: 18.0.37
+  resolution: "@types/react@npm:18.0.37"
+  dependencies:
+    "@types/prop-types": "*"
+    "@types/scheduler": "*"
+    csstype: ^3.0.2
+  checksum: 6a6c8feada1d6aa2d01a38c44ce09598d93688e97ed21511d5e34fd7fe748b760dd957a5ac0725f5643d8d7e1a0ade6478ebd4be96c9605c5d6816b17ad35d2d
+  languageName: node
+  linkType: hard
+
+"@types/scheduler@npm:*":
+  version: 0.16.3
+  resolution: "@types/scheduler@npm:0.16.3"
+  checksum: 2b0aec39c24268e3ce938c5db2f2e77f5c3dd280e05c262d9c2fe7d890929e4632a6b8e94334017b66b45e4f92a5aa42ba3356640c2a1175fa37bef2f5200767
   languageName: node
   linkType: hard
 
@@ -118,6 +166,13 @@ __metadata:
   dependencies:
     type-fest: ^3.0.0
   checksum: 7ce5d9cefd3d7345dc00161aea2ea9ad5fb3dd66658d4e8731ea047be838d755100f0823a05523d0e518e8e080746fc0a45d3ea3053099376bdd572efaedc7c1
+  languageName: node
+  linkType: hard
+
+"ansi-regex@npm:^3.0.0":
+  version: 3.0.1
+  resolution: "ansi-regex@npm:3.0.1"
+  checksum: 09daf180c5f59af9850c7ac1bd7fda85ba596cc8cbeb210826e90755f06c818af86d9fa1e6e8322fab2c3b9e9b03f56c537b42241139f824dd75066a1e7257cc
   languageName: node
   linkType: hard
 
@@ -204,14 +259,18 @@ __metadata:
   dependencies:
     "@types/marked": ^4.0.8
     "@types/node": ^18.15.11
+    "@types/react": ^18.0.37
+    chalk: ^5.2.0
     dotenv: ^16.0.3
     ink: ^4.1.0
+    ink-quicksearch-input: ^1.0.0
     ink-text-input: ^5.0.1
     marked: ^4.3.0
     marked-terminal: ^5.1.1
     openai: ^3.2.1
     react: ^18.2.0
     ts-node: ^10.9.1
+    type-fest: ^3.8.0
     typescript: ^5.0.4
   bin:
     chatgpt: ./src/index.tsx
@@ -296,6 +355,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"csstype@npm:^3.0.2":
+  version: 3.1.2
+  resolution: "csstype@npm:3.1.2"
+  checksum: e1a52e6c25c1314d6beef5168da704ab29c5186b877c07d822bd0806717d9a265e8493a2e35ca7e68d0f5d472d43fac1cdce70fd79fd0853dff81f3028d857b5
+  languageName: node
+  linkType: hard
+
 "delayed-stream@npm:~1.0.0":
   version: 1.0.0
   resolution: "delayed-stream@npm:1.0.0"
@@ -376,6 +442,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"has-ansi@npm:3.0.0":
+  version: 3.0.0
+  resolution: "has-ansi@npm:3.0.0"
+  dependencies:
+    ansi-regex: ^3.0.0
+  checksum: d52ff546c982fb8646e6aa6a4e3741c123a29dcd0342db0e98cd17561356fc47fb03cc0cab9ad2000887facc39b8e7ce385089bdce548e6ff5463858ed5c12c1
+  languageName: node
+  linkType: hard
+
 "has-flag@npm:^4.0.0":
   version: 4.0.0
   resolution: "has-flag@npm:4.0.0"
@@ -387,6 +462,21 @@ __metadata:
   version: 5.0.0
   resolution: "indent-string@npm:5.0.0"
   checksum: e466c27b6373440e6d84fbc19e750219ce25865cb82d578e41a6053d727e5520dc5725217d6eb1cc76005a1bb1696a0f106d84ce7ebda3033b963a38583fb3b3
+  languageName: node
+  linkType: hard
+
+"ink-quicksearch-input@npm:^1.0.0":
+  version: 1.0.0
+  resolution: "ink-quicksearch-input@npm:1.0.0"
+  dependencies:
+    "@types/has-ansi": ^3.0.0
+    "@types/lodash.isequal": ^4.5.5
+    has-ansi: 3.0.0
+    keypress: ^0.2.1
+    lodash.isequal: 4.5.0
+  peerDependencies:
+    ink: 2.6.x
+  checksum: c52f87c89f13d5d50ed43265cbd50f9b072831ac0d18d6df9c20bd93f14eabc89e5a7a1eb8cbb78ef36c40f81ac4497783fdaa7b58f6060f5eade943808bb73a
   languageName: node
   linkType: hard
 
@@ -471,6 +561,20 @@ __metadata:
   version: 4.0.0
   resolution: "js-tokens@npm:4.0.0"
   checksum: 8a95213a5a77deb6cbe94d86340e8d9ace2b93bc367790b260101d2f36a2eaf4e4e22d9fa9cf459b38af3a32fb4190e638024cf82ec95ef708680e405ea7cc78
+  languageName: node
+  linkType: hard
+
+"keypress@npm:^0.2.1":
+  version: 0.2.1
+  resolution: "keypress@npm:0.2.1"
+  checksum: 8f643113fc64d4ab873c98e6b6da54de511c0b32ecefcaa4315b7466dde6c94cba0b9231421655c71b1878c7bc7c932eb75c19d0d67b6af15677778f37cd3e9e
+  languageName: node
+  linkType: hard
+
+"lodash.isequal@npm:4.5.0":
+  version: 4.5.0
+  resolution: "lodash.isequal@npm:4.5.0"
+  checksum: da27515dc5230eb1140ba65ff8de3613649620e8656b19a6270afe4866b7bd461d9ba2ac8a48dcc57f7adac4ee80e1de9f965d89d4d81a0ad52bb3eec2609644
   languageName: node
   linkType: hard
 
@@ -778,7 +882,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"type-fest@npm:^3.0.0, type-fest@npm:^3.6.1":
+"type-fest@npm:^3.0.0, type-fest@npm:^3.6.1, type-fest@npm:^3.8.0":
   version: 3.8.0
   resolution: "type-fest@npm:3.8.0"
   checksum: f9a9ef00378dddd6af2be5cbb67ce4c3a61f6696c5f3ae88815c98266865766118343d928faec8a0efc012efe1d080f59bf62d8fdc382bf285f45d02dbc8fb66

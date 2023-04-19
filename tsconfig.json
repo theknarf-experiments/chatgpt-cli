@@ -21,6 +21,7 @@
 		"isolatedModules": true,
 		"skipLibCheck": true,
 		"module": "ESNext",
-		"moduleResolution": "node"
+		"moduleResolution": "node",
+		"allowImportingTsExtensions": true
 	}
 }
