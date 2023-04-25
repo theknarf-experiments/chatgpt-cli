@@ -51,7 +51,19 @@ const App = () => {
 		{value: 'spawnAGI', label: 'spawnAGI'},
 		{value: 'setupChain', label: 'setupChain'},*/
 		{value: 'Hi there! How are you doing?', label: 'example'},
+		{value: '', label: 'exit'},
 	];
+
+	const onCommand = (item, setValue) => {
+		switch(item.label) {
+			case 'exit':
+				process.exit(0);
+				break;
+
+			default:
+				setValue(item.value);
+		}
+	}
 
 	return (
 		<Box flexDirection="column">
@@ -69,7 +81,7 @@ const App = () => {
 				</Text>
 			</Box>
 			<Box>
-				<CompletionInput slashCommands={slashCommands} onSubmit={submit} />
+				<CompletionInput slashCommands={slashCommands} onSubmit={submit} onCommand={onCommand} />
 			</Box>
 		</Box>
 	);

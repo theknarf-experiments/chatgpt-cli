@@ -451,11 +451,13 @@ export interface Command {
 export interface Props {
 	onSubmit : Function;
 	slashCommands : Command[];
+	onCommand : Function;
 }
 
 export const CompletionInput = ({
 	onSubmit,
 	slashCommands,
+	onCommand,
 } : Props) => {
 	const [value, setValue] = useState('');
 	const handleSubmit = (content : String) => {
@@ -469,7 +471,7 @@ export const CompletionInput = ({
 			<QuickSearch
 				items={slashCommands}
 				onSelect={(item) => {
-					setValue(item.value);
+					onCommand(item, setValue);
 				}} />
 		</>
 	}
