@@ -11,7 +11,7 @@
     "@types/node": "^18.15.11",
     "chalk": "^5.2.0",
     "dotenv": "^16.0.3",
-    "ink": "^4.1.0",
+    "ink": "^4.2.0",
     "ink-quicksearch-input": "^1.0.0",
     "ink-text-input": "^5.0.1",
     "marked": "^4.3.0",
