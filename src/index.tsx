@@ -64,6 +64,7 @@ const App = () => {
 		{value: 'spawnAGI', label: 'spawnAGI'},
 		{value: 'setupChain', label: 'setupChain'},*/
 		{value: 'Hi there! How are you doing?', label: 'example'},
+		{value: 'Help me build my intuition about ', label: 'intuition'},
 		{value: '', label: 'exit'},
 	];
 
