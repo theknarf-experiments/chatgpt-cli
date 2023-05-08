@@ -5,6 +5,7 @@ import dotenv from 'dotenv';
 import { render, Box, Text, Newline } from 'ink';
 import Markdown from './Markdown.tsx';
 import { CompletionInput } from './CompletionInput.tsx';
+import Spinner from 'ink-spinner';
 
 dotenv.config();
 
@@ -20,8 +21,18 @@ interface Message {
 }
 type Messages = Message[];
 
+const Loader = () => {
+	return <Text>
+		<Text color="green">
+			<Spinner type="dots" />
+		</Text>
+		{' Bip bop'}
+	</Text>;
+}
+
 const App = () => {
 	const [messages, setMessages] = useState<Messages>([]);
+	const [loading, setLoading] = useState<boolean>(false);
 
 	const chat = async (messages : Messages) => {
 		const completion = await openai.createChatCompletion({
@@ -33,6 +44,7 @@ const App = () => {
 			...messages,
 			completion.data.choices[0].message,
 		]));
+		setLoading(false);
 	}
 
 	const submit = (content : string) => {
@@ -41,6 +53,7 @@ const App = () => {
 				...messages,
 				{ role: 'user', content },
 			];
+			setLoading(true);
 			chat(newMessages);
 			return newMessages;
 		});
@@ -80,6 +93,7 @@ const App = () => {
 				}
 				</Text>
 			</Box>
+			{loading && <Box><Loader /></Box>}
 			<Box>
 				<CompletionInput slashCommands={slashCommands} onSubmit={submit} onCommand={onCommand} />
 			</Box>

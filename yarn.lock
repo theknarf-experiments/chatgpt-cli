@@ -264,6 +264,7 @@ __metadata:
     dotenv: ^16.0.3
     ink: ^4.2.0
     ink-quicksearch-input: ^1.0.0
+    ink-spinner: ^5.0.0
     ink-text-input: ^5.0.1
     marked: ^4.3.0
     marked-terminal: ^5.1.1
@@ -297,6 +298,13 @@ __metadata:
   dependencies:
     restore-cursor: ^4.0.0
   checksum: ab3f3ea2076e2176a1da29f9d64f72ec3efad51c0960898b56c8a17671365c26e67b735920530eaf7328d61f8bd41c27f46b9cf6e4e10fe2fa44b5e8c0e392cc
+  languageName: node
+  linkType: hard
+
+"cli-spinners@npm:^2.7.0":
+  version: 2.9.0
+  resolution: "cli-spinners@npm:2.9.0"
+  checksum: a9c56e1f44457d4a9f4f535364e729cb8726198efa9e98990cfd9eda9e220dfa4ba12f92808d1be5e29029cdfead781db82dc8549b97b31c907d55f96aa9b0e2
   languageName: node
   linkType: hard
 
@@ -477,6 +485,18 @@ __metadata:
   peerDependencies:
     ink: 2.6.x
   checksum: c52f87c89f13d5d50ed43265cbd50f9b072831ac0d18d6df9c20bd93f14eabc89e5a7a1eb8cbb78ef36c40f81ac4497783fdaa7b58f6060f5eade943808bb73a
+  languageName: node
+  linkType: hard
+
+"ink-spinner@npm:^5.0.0":
+  version: 5.0.0
+  resolution: "ink-spinner@npm:5.0.0"
+  dependencies:
+    cli-spinners: ^2.7.0
+  peerDependencies:
+    ink: ">=4.0.0"
+    react: ">=18.0.0"
+  checksum: 88e547ff56ac8ee31239daef43b03ca2797eb20cc338ad25aba8e8fbe2cb322ea212494f8c545f327d345051be50542e1a27fdee3758a32a1b4a5db5308cad63
   languageName: node
   linkType: hard
 
