@@ -6,6 +6,9 @@ import { render, Box, Text, Newline } from 'ink';
 import Markdown from './Markdown.tsx';
 import { CompletionInput } from './CompletionInput.tsx';
 import Spinner from 'ink-spinner';
+import fs from "fs";
+import { v4 as uuidv4 } from "uuid";
+
 
 dotenv.config();
 
@@ -33,6 +36,7 @@ const Loader = () => {
 const App = () => {
 	const [messages, setMessages] = useState<Messages>([]);
 	const [loading, setLoading] = useState<boolean>(false);
+	const [info, setInfo] = useState<string>("");
 
 	const chat = async (messages : Messages) => {
 		const completion = await openai.createChatCompletion({
@@ -63,13 +67,21 @@ const App = () => {
 		/*{value: 'refFile', label: 'refFile'},
 		{value: 'spawnAGI', label: 'spawnAGI'},
 		{value: 'setupChain', label: 'setupChain'},*/
+	  {value: 'save', label: 'save'},
 		{value: 'Hi there! How are you doing?', label: 'example'},
 		{value: 'Help me build my intuition about ', label: 'intuition'},
-		{value: '', label: 'exit'},
+		{value: 'exit', label: 'exit'},
 	];
 
-	const onCommand = (item, setValue) => {
-		switch(item.label) {
+	const onCommand = async (item, setValue) => {
+		switch(item.value) {
+			case 'save':
+				const filename = `./${uuidv4()}.json`;
+				await fs.promises.writeFile(filename, JSON.stringify(messages));
+				setInfo(`Chat saved as '${filename}'`);
+				setValue('');
+				break;
+
 			case 'exit':
 				process.exit(0);
 				break;
@@ -95,6 +107,7 @@ const App = () => {
 				</Text>
 			</Box>
 			{loading && <Box><Loader /></Box>}
+			{info && <Text>{info}</Text>}
 			<Box>
 				<CompletionInput slashCommands={slashCommands} onSubmit={submit} onCommand={onCommand} />
 			</Box>

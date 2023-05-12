@@ -273,6 +273,7 @@ __metadata:
     ts-node: ^10.9.1
     type-fest: ^3.8.0
     typescript: ^5.0.4
+    uuid: ^9.0.0
   bin:
     chatgpt: ./src/index.tsx
   languageName: unknown
@@ -953,6 +954,15 @@ __metadata:
     tsc: bin/tsc
     tsserver: bin/tsserver
   checksum: 6a1fe9a77bb9c5176ead919cc4a1499ee63e46b4e05bf667079f11bf3a8f7887f135aa72460a4c3b016e6e6bb65a822cb8689a6d86cbfe92d22cc9f501f09213
+  languageName: node
+  linkType: hard
+
+"uuid@npm:^9.0.0":
+  version: 9.0.0
+  resolution: "uuid@npm:9.0.0"
+  bin:
+    uuid: dist/bin/uuid
+  checksum: 8dd2c83c43ddc7e1c71e36b60aea40030a6505139af6bee0f382ebcd1a56f6cd3028f7f06ffb07f8cf6ced320b76aea275284b224b002b289f89fe89c389b028
   languageName: node
   linkType: hard
 

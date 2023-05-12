@@ -21,7 +21,8 @@
     "react": "^18.2.0",
     "ts-node": "^10.9.1",
     "type-fest": "^3.8.0",
-    "typescript": "^5.0.4"
+    "typescript": "^5.0.4",
+    "uuid": "^9.0.0"
   },
   "bin": {
     "chatgpt": "./src/index.tsx"
