@@ -14,5 +14,5 @@ and then run:
 
 ```
 yarn install
-./src/inedx.tsx
+./src/index.tsx
 ```
