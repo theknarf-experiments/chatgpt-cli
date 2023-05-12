@@ -261,6 +261,7 @@ __metadata:
     "@types/node": ^18.15.11
     "@types/react": ^18.0.37
     chalk: ^5.2.0
+    commander: ^10.0.1
     dotenv: ^16.0.3
     ink: ^4.2.0
     ink-quicksearch-input: ^1.0.0
@@ -347,6 +348,13 @@ __metadata:
   dependencies:
     delayed-stream: ~1.0.0
   checksum: 49fa4aeb4916567e33ea81d088f6584749fc90c7abec76fd516bf1c5aa5c79f3584b5ba3de6b86d26ddd64bae5329c4c7479343250cfe71c75bb366eae53bb7c
+  languageName: node
+  linkType: hard
+
+"commander@npm:^10.0.1":
+  version: 10.0.1
+  resolution: "commander@npm:10.0.1"
+  checksum: 436901d64a818295803c1996cd856621a74f30b9f9e28a588e726b2b1670665bccd7c1a77007ebf328729f0139838a88a19265858a0fa7a8728c4656796db948
   languageName: node
   linkType: hard
 

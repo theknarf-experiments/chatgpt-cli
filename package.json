@@ -7,9 +7,8 @@
     "check:types": "tsc --noEmit --watch"
   },
   "dependencies": {
-    "@types/marked": "^4.0.8",
-    "@types/node": "^18.15.11",
     "chalk": "^5.2.0",
+    "commander": "^10.0.1",
     "dotenv": "^16.0.3",
     "ink": "^4.2.0",
     "ink-quicksearch-input": "^1.0.0",
@@ -29,6 +28,8 @@
   },
   "type": "module",
   "devDependencies": {
+    "@types/marked": "^4.0.8",
+    "@types/node": "^18.15.11",
     "@types/react": "^18.0.37"
   }
 }

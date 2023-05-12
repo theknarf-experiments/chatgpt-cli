@@ -14,5 +14,5 @@ and then run:
 
 ```
 yarn install
-./src/index.tsx
+./src/index.tsx chat
 ```
