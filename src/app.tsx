@@ -1,11 +1,10 @@
-import { Configuration, OpenAIApi } from "openai";
-import React, {useState, useEffect} from 'react';
-import { render, Box, Text, Newline } from 'ink';
+import {useState } from 'react';
+import { Box, Text, Newline } from 'ink';
 import Markdown from './Markdown.tsx';
 import { CompletionInput } from './CompletionInput.tsx';
 import Spinner from 'ink-spinner';
 import fs from "fs";
-import { v4 as uuidv4 } from "uuid";
+import { v4 as uuidv4 } from 'uuid';
 
 interface Message {
 	role: String;
@@ -22,8 +21,8 @@ const Loader = () => {
 	</Text>;
 }
 
-const App = ({ openai }) => {
-	const [messages, setMessages] = useState<Messages>([]);
+const App = ({ openai, startingMessages }) => {
+	const [messages, setMessages] = useState<Messages>(startingMessages || []);
 	const [loading, setLoading] = useState<boolean>(false);
 	const [info, setInfo] = useState<string>("");
 
