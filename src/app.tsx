@@ -27,7 +27,7 @@ const App = ({ openai, startingMessages }) => {
 	const [info, setInfo] = useState<string>("");
 
 	const chat = async (messages : Messages) => {
-		const completion = await openai.createChatCompletion({
+		const completion = await openai.chat.completions.create({
 			model: "gpt-3.5-turbo",
 			messages,
 		});
